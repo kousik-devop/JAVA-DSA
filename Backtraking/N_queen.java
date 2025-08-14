@@ -46,13 +46,14 @@ public class N_queen {
     }
 
     static void saveboard(char board[][]){
+        System.out.println("----------Chess Board----------");
         for(int i=0;i<board.length;i++){
             for(int j = 0;j<board.length;j++){
                 if(board[i][j] == 'Q'){
-                    System.out.print("Q");
+                    System.out.print("Q ");
                 }
                 else{
-                    System.out.print(".");
+                    System.out.print("_ ");
                 }
             }
             System.out.println();
@@ -69,12 +70,12 @@ public class N_queen {
             if(issafe(row,col,board)){
                 board[row][col] = 'Q';
                 helper(board, col+1);
-                board[row][col] = '.';
+                board[row][col] = '_';
             }
         }
     }
     public static void main(String[] args) {
-        int n = 4;
+        int n = 10;
         char board[][] = new char[n][n];
 
         helper(board, 0);
