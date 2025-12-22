@@ -1,4 +1,4 @@
-package Shorting;
+
 
 public class merge {
     public static void merge(int arr[],int l,int mid,int r){

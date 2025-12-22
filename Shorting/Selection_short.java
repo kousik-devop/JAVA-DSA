@@ -1,4 +1,4 @@
-package Shorting;
+
 import java.util.*;
 
 public class Selection_short {
@@ -12,9 +12,9 @@ public class Selection_short {
 
     int a = arr.length-1;
 
-    for(int i=0; i<a; i++){
+    for(int i=0; i<=a; i++){
         int smallest = i;
-        for(int j=i+1; j<arr.length; j++){
+        for(int j=i+1; j<=a; j++){
             if(arr[smallest]>arr[j]){
                 smallest = j;
             }
@@ -25,7 +25,7 @@ public class Selection_short {
         arr[i] = temp;
     }
     
-    for(int i=0; i<a;i++){
+    for(int i=0; i<=a;i++){
         System.out.print(arr[i]+" ");
     }
 }

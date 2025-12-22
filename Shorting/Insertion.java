@@ -1,22 +1,34 @@
-package Shorting;
+
 import java.util.*;
 
 public class Insertion {
-    int arr[] = {1,8,4,6,2};
+    public static void main(String[] args){
+        int arr[] = {1,8,4,6,2};
 
-    int a = arr.length-1;
+        int a = arr.length;
 
-    // Insertion Short
+        // Insertion Short
 
-    for(int i=1; i<a; i++){
-        int current = arr[i];
+        for(int i=1; i<a; i++){
+            int current = arr[i];
 
-        int j = i-1;
+            int prev = i-1;
 
-        while(j>=0 && current < arr[j]){
-            
+            // Finding the correct position to insert the element
+
+            while(prev>=0 && current < arr[prev]){
+                arr[prev+1] = arr[prev];
+                prev--;
+            }
+
+            // Insertion
+            arr[prev+1] = current;
         }
-    }
 
+        for(int j=0; j<a; j++){
+            System.out.print(arr[j]+" ");
+        }
+
+        }
     
 }

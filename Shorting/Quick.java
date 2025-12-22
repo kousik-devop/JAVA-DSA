@@ -1,4 +1,4 @@
-package Shorting;
+
 
 public class Quick {
 

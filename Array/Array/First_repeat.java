@@ -15,6 +15,11 @@ public class First_repeat {
        
     }
 
+    public static int firstValue2(int arr[]){
+        int slow = 0;
+        int fast = slow + 1;
+    }
+
     public static void main(String[] args) {
 
         int arr[] = {1,5,4,5,1};
